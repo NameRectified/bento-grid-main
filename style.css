@@ -14,21 +14,21 @@
 }
 
 h1{
-    /* font-size: 4vw; */
-    font-size: max(3rem,4vw);
+    font-size: 4vw;
+    /* font-size: max(3rem,4vw); */
 }
 h2{
-    /* font-size: 2.8vw; */
-    font-size: max(2rem,2.8vw);
+    font-size: 2.8vw;
+    /* font-size: max(2rem,2.8vw); */
 }
 h3{
-    /* font-size: 2.2vw; */
-    font-size: max(1.75rem,2.2vw);
+    font-size: 2.2vw;
+    /* font-size: max(1.75rem,2.2vw); */
 }
 
 p{
-    /* font-size:1.3vw; */
-    font-size: max(1rem,1.3vw);
+    font-size:1.3vw;
+    /* font-size: max(1rem,1.3vw); */
 }
 img{
     max-width: 50%;
@@ -174,7 +174,7 @@ main{
     display: block;
     margin-inline:auto;
     text-align: center;
-    font-size: max(3rem,4vw);
+    font-size: 4vw;
     font-weight: bold;
 }
 .right-5{
@@ -187,13 +187,26 @@ main{
     color: white;
 }
 
-@media only screen and (max-width:375px) {
+@media only screen and (max-width:650px) {
     main{
         width: 80rem;
         grid-template-columns: 1fr;
       grid-template-areas: "right"
                             "left";
     }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size:2rem;
+    }
+    h3{
+        font-size: 1.75rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+
     .right{
         grid-template-columns: 1fr;
         grid-template-areas: "right1"
@@ -237,6 +250,7 @@ main{
     }
     .percent{
         text-align: left;
+        font-size: 3rem;
     }
     .right-5{
         flex-direction: column;
