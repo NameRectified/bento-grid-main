@@ -23,7 +23,7 @@ h2{
 }
 h3{
     /* font-size: 2.2vw; */
-    font-family: max(1.75rem,2.2vw);
+    font-size: max(1.75rem,2.2vw);
 }
 
 p{
@@ -76,6 +76,10 @@ main{
 .left-1 img{
     min-width: 80%;
 }
+.quicker{
+    color: var(--purple500);
+    font-style: italic;
+}
 .left-2{
     background-color: var(--yellow500);
     padding: 1rem;
@@ -109,6 +113,9 @@ main{
     align-items: center;
     justify-content: center;
 }
+.ten-x{
+    color: var(--yellow500);
+}
 .right-2{
     grid-area:right2;
     padding: 1.75rem;
@@ -116,6 +123,7 @@ main{
     padding-right: 0;
     position: relative;
     overflow: hidden;
+
 }
 .right-2 img{
     max-width: 130%;
@@ -146,6 +154,7 @@ main{
     position: relative;
     overflow: hidden;
 }
+
 .right-32 img{
     min-width: 80%;
     position: absolute;
