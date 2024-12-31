@@ -14,29 +14,24 @@
 }
 
 h1{
-    font-size: 4vw;
-    /* font-size: min(3rem,6.4vw); */
-    /* font-size: clamp(3rem, 6.4vw, 3rem); */
-
+    /* font-size: 4vw; */
+    font-size: max(3rem,4vw);
 }
 h2{
-    font-size: 2.8vw;
-    /* font-size: 4.267vw; */
-    /* font-size: clamp(2rem,4.267vw,2rem); */
+    /* font-size: 2.8vw; */
+    font-size: max(2rem,2.8vw);
 }
 h3{
-    /* font-size: 1.8rem; */
-    font-size: 2.2vw;
-    /* font-size:clamp(1.6rem,3.84vw,1.6rem); */
+    /* font-size: 2.2vw; */
+    font-family: max(1.75rem,2.2vw);
 }
 
 p{
-    font-size:1.3vw;
-    /* font-size:clamp(1rem,2.133vw,1rem); */
+    /* font-size:1.3vw; */
+    font-size: max(1rem,1.3vw);
 }
 img{
     max-width: 50%;
-    /* overflow: hidden; */
 }
 
 div{
@@ -52,9 +47,7 @@ body{
     background-color: wheat;
 }
 main{
-    /* border: 2px solid black; */
     width: 70vw;
-    /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: "left right right right";
@@ -70,9 +63,6 @@ main{
     gap: 1rem;
 }
 
-.left div{
-    /* border: 1px solid red; */
-}
 
 .left-1{
     display: flex;
@@ -81,6 +71,7 @@ main{
     align-items: center;
     text-align: center;
     background-color: var(--yellow100);
+    /* grid-area:left1 */
 }
 .left-1 img{
     min-width: 80%;
@@ -92,6 +83,7 @@ main{
     flex-direction: column;
     align-items: center ;
     justify-content: space-around;
+    /* grid-area: left2; */
 }
 .left-2 img{
     min-width: 80%;
@@ -106,9 +98,6 @@ main{
                           "right4 right5 right5";
     gap: 1rem;
     min-width: 0;
-}
-.right div{
-    border: 1px solid green;
 }
 .right-1{
     grid-area:right1;
@@ -132,7 +121,6 @@ main{
     max-width: 130%;
     object-fit: cover;
     margin: 2rem 1rem;
-    /* margin-left: 2rem; */
 }
 .right-3{
     grid-area:right3;
@@ -140,11 +128,6 @@ main{
     justify-content: space-between;
 }
 
-/* .img-container{
-    position: relative;
-    overflow: hidden;
-    overflow-clip-margin: content-box;
-} */
 .right-31{
     background-color: white;
     padding: 1rem;
@@ -154,9 +137,7 @@ main{
     overflow: hidden;
 }
 .right-31 img{
-    /* width: 120%; */
     max-width: 120%;
-    /* position: absolute; */
 }
 .right-32{
     padding: 1rem;
@@ -184,8 +165,7 @@ main{
     display: block;
     margin-inline:auto;
     text-align: center;
-    /* font-size:3rem; */
-    font-size: 4vw;
+    font-size: max(3rem,4vw);
     font-weight: bold;
 }
 .right-5{
@@ -196,5 +176,60 @@ main{
     align-items: center;
     justify-content: space-between;
     color: white;
-    /* min-width: 50%; */
+}
+
+@media only screen and (max-width:375px) {
+    main{
+        width: 80rem;
+        grid-template-columns: 1fr;
+      grid-template-areas: "right"
+                            "left";
+    }
+    .right{
+        grid-template-columns: 1fr;
+        grid-template-areas: "right1"
+                            "right3"
+                            "right2"
+                            "right5"
+                            "right4";
+    }
+    .right-1{
+        padding: 1rem;
+        padding-top: 0;
+    }
+    .right-2{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-2 img{
+        max-width: 100%;
+        /* padding: 1rem; */
+    }
+    .right-3{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        /* gap: 1rem; */
+    }
+    .right-31,.right-32{
+        width: 100%;
+        position: static;
+    }
+    .right-32 img{
+        position: static;
+        margin-top: 1rem;
+        margin-bottom: -2rem;
+    }
+    .right-4 img{
+        max-width: 60%;
+    }
+    .percent{
+        text-align: left;
+    }
+    .right-5{
+        flex-direction: column;
+    }
 }
